@@ -1,0 +1,53 @@
+<div class="card" *ngIf="isLoading">
+    <h4 class="card-header">Loading...</h4>
+    <div class="card-block text-xs-center">
+      <i class="fa fa-circle-o-notch fa-spin fa-3x"></i>
+    </div>
+</div>
+  
+<div class="row hidden-xs-down">
+    <h2 class="shopping-head">Setting</h2>
+</div>
+<div class="row center rowBorder"><div class="col-md-12">Create new coupons with custom expire time in seconds</div></div>
+<div class="row vspace">
+    <div class="col-md-12 col-xs-12 rowCover">
+        <div class="row rowBorder hidden-xs-down">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2 bold-text centered col-xs-12">
+                        Expire Seconds<br />
+                    </div>
+                    <div class="col-md-6 centered col-xs-12 extra-pad">
+                        <input type="text" class="form-control" placeholder="Enter Coupon Expire Time In Seconds" #txtSeconds />
+                    </div>
+                    <div class="col-md-3 bold-text centered col-xs-12">
+                        <button type="button" class="btn btn-primary" (click)="onCreateCouponsClick(txtSeconds.value)">Create</button>
+                        <img *ngIf="loading" class="pl-2" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row rowBorder hidden-xs-down vspace">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2 bold-text centered col-xs-12">
+                        Setup Products<br />
+                    </div>
+                    <div class="col-md-9 bold-text centered col-xs-12">
+                        <button type="button" class="btn btn-primary" (click)="onSetupProductsClick()">Setup Products</button>
+                        <img *ngIf="loading" class="pl-2" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row rowBorder" *ngIf="data">
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-xs-12 prod-name-alt">{{data}} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-toast [message]="toast.message"></app-toast>

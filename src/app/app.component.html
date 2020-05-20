@@ -1,0 +1,42 @@
+<div class="container">
+
+  <nav class="navbar navbar-dark bg-inverse nav-head" style="height: 90px; background-color: #345d78 !important;">
+    <div class="nav navbar-nav" style="float: left; display: table;">
+      <a href="/" style="display: table-cell;"><img src="/assets/logo.png" alt="" height="40px" width="50px"> 
+        <span class="heading">Fruits Shopping Cart</span>
+      </a>
+    </div> 
+    <div class="nav navbar-nav" style="float: right;">
+      <div *ngIf="currentUser" style="height: 30px; color: white;">
+        Welcome {{currentUser.firstName}}
+      </div>
+      <div style="height: 40px;">
+        <div class="nav navbar-nav" style="float:right; margin-left: 1rem;">
+            <div class="navbar-nav" *ngIf="currentUser" style="float: right;">
+                <a class="nav-item nav-link" (click)="logout()">Logout</a>
+            </div>
+            <div class="navbar-nav" [hidden]="currentUser" style="float: right;">
+              <a class="nav-item nav-link" href="/login">Login</a>
+            </div>
+        </div>
+        <div class="nav navbar-nav" style="float:right">
+            <a routerLink="/" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa fa-list"></i> <span class="hidden-xs-down"> Dashboard</span>
+            </a>
+            <a routerLink="/order" class="nav-item nav-link" routerLinkActive="active">
+                <i class="fa fa-shopping-cart"></i> <span class="hidden-xs-down"> Shopping Cart </span>
+            </a>
+            <a routerLink="/setting" *ngIf="currentUser" class="nav-item nav-link" routerLinkActive="active">
+                <span class="hidden-xs-down"> Settings </span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+  <div class="createdby">
+      Developed By <a href="https://www.linkedin.com/in/ishtiaqofficial/">Muhammad Ishtiaq</a>
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+.heading{
+    font-weight:bold;
+    color:white; 
+    font-size: 27px;
+    font-family: sans-serif;
+    vertical-align: middle;
+}
+
+.nav-head{
+    padding-top:15px;
+}
+
+.createdby {
+    text-align: center; 
+    color: #808080;
+    font-size: 12px;
+    margin: 20px;
+}

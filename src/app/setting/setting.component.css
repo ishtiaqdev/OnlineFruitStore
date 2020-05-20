@@ -1,0 +1,42 @@
+
+.shopping-head
+{
+    color: #a7a7a7;
+    font-family: "Trebuchet MS";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding: 27px 0 10px 30px;
+}
+
+.rowBorder{
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 13px;
+    margin: 5px;
+}
+
+.rowBorder-alt{
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 15px;
+    margin-left:10px;
+}
+
+.vspace{
+    margin-top: 15px;
+}
+
+.prod-name{
+    color: #808080;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 0px;
+    border: 1px solid #808080;
+    margin-bottom: 5px;
+}
+
+.prod-name-alt{
+    color: #808080;
+    font-weight: 500;
+    
+}
